@@ -1,0 +1,157 @@
+/* 1. menu */
+.menu {
+  display: flex;
+}
+.menu-item {
+  background: gold;
+  width: 25%;
+  transition: 0.5s;
+}
+
+.menu-item:hover {
+  background: crimson;
+  width: 35%;
+}
+
+.menu-link {
+  display: block; /* 글자말고도 선택 가능하도록 */
+  text-decoration: none;
+  padding: 1em; /* 현재 내 폰트사이즈만큼 여백을 준다. */
+  font-size: 1.2rem;
+  color: black;
+  text-align: center;
+}
+
+.menu-link:hover {
+  color: white;
+  font-weight: 600;
+}
+
+/* 2. search */
+.search-form {
+  display: flex;
+  height: 40px; /* 기본값이 stretch라서 */
+}
+
+.search-form input[type="search"] {
+  flex: 1;
+  border: 0;
+  border-radius: 0.3em;
+  font-size: 1rem;
+}
+
+.search-form input[type="submit"] {
+  width: 4em;
+  border: 0;
+  border-radius: 0.3em;
+  font-size: 1rem;
+  background: gold;
+}
+
+/* 3. bullet (들여쓰기) */
+
+.info-list-item {
+  margin: 0.5em 0;
+  display: flex; /* 불릿과 글자는 item안에 배치되어있음 */
+}
+.info-list-item:before {
+  content: "😊";
+  margin: 0 0.5em 0 0;
+}
+
+/* 4. message */
+
+.user-item {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.user-photo {
+  width: 50px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 50%;
+  background-color: gold;
+  background-repeat: no-repeat;
+  background-position: top; /* 일반적으로는 center */
+  background-size: 150%;
+  flex-shrink: 0; /* 백그라운드 이미지 안찌그러지게 */
+  margin-right: 0.5em;
+}
+
+/* 5. user-name */
+
+.user-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.friend-item {
+  align-items: center;
+}
+
+/* 6. modal */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.dialog {
+  width: 50vw;
+  background: white;
+  border-radius: 1em;
+  padding: 2em;
+}
+
+/* 7. card */
+.card-item {
+  display: flex; /* 하얀부분 폭 때문에 */
+  flex-direction: column; /* 하얀부분 폭 때문에 */
+  margin-bottom: 2rem;
+}
+
+.card-image {
+  height: 0;
+  padding-bottom: 60%;
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card-image img {
+  display: none;
+}
+
+.card-desc {
+  flex: 1 1 auto; /* 하얀부분 폭 때문에 */
+  background-color: white;
+  padding: 1em;
+}
+
+@media (min-width: 600px) {
+  .card-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem; /* 양쪽 여백 없애기 */
+  }
+
+  .card-item {
+    width: 50%;
+    padding: 0 1rem; /* justify-content 대신 */
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-item {
+    width: 33.3%;
+  }
+}
