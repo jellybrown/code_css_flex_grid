@@ -155,3 +155,8 @@
     width: 33.3%;
   }
 }
+
+.info-list,
+.user-list {
+  margin-bottom: 2rem;
+}
