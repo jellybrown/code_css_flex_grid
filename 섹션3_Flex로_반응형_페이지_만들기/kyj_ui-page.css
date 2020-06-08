@@ -114,7 +114,7 @@ label[for="modal-switch"] span {
 }
 
 @media (min-width: 1400px) {
-  .primary {
+  .primary { /* 사이드가 아닌 내용이 늘어나게 */
     width: calc(100% - 600px);
   }
   .secondary {
